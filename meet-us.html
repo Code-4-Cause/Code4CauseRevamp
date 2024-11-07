@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code4Cause</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon-32x32.png" type="image/png">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/png">
+    <script>
+function showModal(element) {
+    const modal = document.getElementById('modal');
+    const modalImg = modal.querySelector('img');
+    const modalName = modal.querySelector('.name');
+    const modalBio = modal.querySelector('.bio');
+
+    // Get the clicked person's image
+    modalImg.src = element.querySelector('img').src;
+
+    // Get the name from the clicked person's div
+    modalName.innerHTML = element.querySelector('div').childNodes[0].nodeValue.trim(); // Get the name text
+
+    // Get the bio from the hidden div
+    modalBio.innerHTML = element.querySelector('.bio').innerHTML;
+
+    // Show the modal
+    modal.style.display = 'flex';
+    
+    // Blur the background
+    document.querySelector('.container1').classList.add('blurred');
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none'; // Hide the modal
+    document.querySelector('.container1').classList.remove('blurred'); // Remove blur from background
+}
+
+// Close modal on clicking outside of modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+    </script>
+</head>
+<body>
+    <header class="header1">
+        <div class="logocontainer">
+            <img class="logo" src="Code4Cause.png" alt="Code4Cause Logo">
+        </div> 
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="meet-us.html">Meet the Team</a></li>
+                <li><a href="bookings.html">Book a Meeting</a></li>  
+                <li><a href="portfolio.html">Website Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img src="BentLine2.png" alt="Background Design" style="margin-top: 10%; width: 100%; max-width: 1400px;">  
+    <h1 style="color: white; margin-top: -4%;">Our Journey</h1>
+    <center>
+        <div style="background-color: white; height: 1px; width: 900px; margin-top: -6%;"></div>
+    </center>
+    <div class="parallelogram2">
+        <p class="content2">Code4Cause emerged unexpectedly from our passion to impact the community. One night, while pondering ideas on a friend's porch, we decided to brainstorm ways to help. The next day, while searching for a local ice cream shop's hours, we discovered it lacked a website. This highlighted the digital divide facing many small businesses. Realizing we could use our computer science skills to bridge this gap, we were inspired to create a web development agency that offers custom websites at no cost. Thus, Code4Cause was born.</p>
+    </div>
+    
+    <h1 style="color: white; margin-top: 8%;">Meet the Team</h1>
+    <center>
+        <div style="background-color: white; height: 1px; width: 900px; margin-top: -6%;"></div>
+    </center>
+
+    <div class="container1">
+      <div class="person" onclick="showModal(this)">
+        <img src="Anish.png" alt="Anish Aruru" style="border: 4px solid white;">
+        <div class="name">Anish Aruru<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Co-Founder<br>Co-Chief Technology Director<br>Lead Manager</p>
+            <p>Hello, I am Anish Aruru, and I am a junior at the Maggie L. Walker Governor's School. I love learning new things and fueling my curiosity. My dream fields are coding and engineering. In my free time I love playing pickleball and the guitar. I hope to be able to make an impact on my community through Code4Cause and I am excited for the future!!
+            </p>
+        </div>
+      </div>
+
+    <div class="person" onclick="showModal(this)">
+        <img src="Saket.png" alt="Saket Sambaraju" style="border: 4px solid white;">
+        <div class="name">Saket Sambaraju<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Co-Founder<br>Co-Chief Technology Director<br>Project Manager</p>
+            <p>Hi, I am Saket Sambaraju, and I am a junior at Maggie Walker Governor's School. In my free time, I love to play table tennis and program with new designs and styles. I aspire to become a future computer science engineer in order to help better this world through computer science. I am excited for Code4Cause and the impact that we will produce in the future!</p>
+        </div>
+        </div>
+
+    <div class="person" onclick="showModal(this)">
+        <img src="Eshwar-modified.png" alt="Eshwar Bejugam" style="border: 4px solid white;">
+        <div class="name">Eshwar Bejugam<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Co-Founder<br>Director of Operations and Logistics<br>Charity Manager</p>
+            <p>Hi, I am Eshwar Bejugam and I am a junior at J.R. Tucker High School in the International Baccalaureate program. I love math and computer science and I aspire to pursue data science in the future. In my free time, I enjoy playing chess and pickleball. I’m excited to use my love for technology to help the community!
+            </p>
+        </div>
+        </div>
+
+    <div class="person" onclick="showModal(this)">
+        <img src="Sriram.png" alt="Sriram Darsi" style="border: 4px solid white;">
+        <div class="name">Sriram Darsi<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Co-Founder<br>Director of External Communications</p>
+            <p>Hi! My name is Sriram Darsi and I am a junior at Henrico High School. In my free time, I love to listen to music, play basketball, and watch sports. I am looking forward to implementing various softwares in different socioeconomic areas in my community. 
+        </p>
+        </div>
+        </div>
+
+    <div class="person" onclick="showModal(this)">
+        <img src="Karan.jpeg" alt="Karan Nair" style="border: 4px solid white;">
+        <div class="name">Karan Nair<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Director of Programming</p>
+            <p>My name is Karan Nair and I am a junior at Maggie L. Walker Governor's School. In my free time I like to workout, play soccer, and cad. In the future I want to pursue engineering with a minor in computer science. Im experienced in python, html, and css, and hope to help lead Code4Cause to a bright future!
+          </p>
+        </div>
+       </div>
+
+    <div class="person" onclick="showModal(this)">
+        <img src="Jithesh.png" alt="Jithesh Chevuru" style="border: 4px solid white;">
+        <div class="name">Jithesh Chevuru<br><span class="span1">About Me &#8594;</span></div>
+        <div class="bio" style="display:none;">
+            <p class="middle">Co-Founder<br>Director of marketing</p>
+            <p class="t">My name is Jithesh Chevuru and I am the current director of marketing. I am a junior at Henrico High School and I love to play tennis and volleyball. In my free time I like to talk to my friends and learn new things. I hope to spread Code4Cause’s mission across the nation. </p>
+        </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img src="" alt="">
+          <div style="color: black;" class="name" style="display: flex; justify-content: center;"></div>
+          <div class="bio" style="display: block; justify-content: center;"></div>
+          <div class="t" style="display: block; justify-content: center;"></div>
+      </div>
+  </div>
+
+  <footer>
+    <div class="footer-container" style="display: flex; align-items: center;">
+        <img class="footerlogo" src="CODE4Cause.png" alt="Code 4 Cause Logo"> <!-- Logo to the left -->
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-left: 1%;">
+            <img class="instapic" src="cropped-image.png" alt="Instagram Icon">
+            <img class="emailpic" src="emailpic.png" alt="Email Icon">
+        </div>
+        <div class="socialinfobox" style="display: flex; flex-direction: column; text-align: left; text-decoration: none;">
+            <p class="instatext"><span class="code4causeorg" style="text-decoration: none;"><a href="https://www.instagram.com/code4cause_org/" target="_blank">code4cause_org</a></span></p><p class="instatext">support@code4cause.org</p>
+    </div>
+    <div style="display: flex; margin-left: 15%; text-decoration: none; margin-right: 10%;">
+        <p class="linktree">
+            <span class="link" style="margin-bottom: 4%;"><a href="Home.html" class="footerlink" style="text-decoration:none; ">Home</a></span><br>
+            <span class="link" style="margin-bottom: 4%;"><a href="meet-us.html" class="footerlink" style="text-decoration:none; ">Meet the Team</a></span><br>
+            <span class="link" style="margin-bottom: 4%;"><a href="bookings.html" class="footerlink" style="text-decoration:none; ">Book a Meeting</a></span><br>
+            <span class="link" style="margin-bottom: 4%;"><a href="portfolio.html" class="footerlink" style="text-decoration:none; ">Website Portfolio</a></span></p>
+    </div>    
+    <div>
+        <button onclick="location.href='mailto:code4causenonprofit@gmail.com';" class="contact-us">
+            Contact Us
+        </button>
+    </div>    
+    </div>
+</footer>
+  
+</body>
+</html>
